@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-	/**
-	 * main - entry point
-	 *
-	 * Description: main prints a phrase
-	 *
-	 * Return:0 if exited successfully
-	 */
+/**
+ * main -       Use puts function to output a phrase
+ *
+ * Description: prints '"Programming is like building a multilingual puzzle'
+ *              to stdout
+ *
+ * Return:      Returns '0' if output string to stdout with no issue
+ */
 
 int main(void)
 {
-puts("\"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }

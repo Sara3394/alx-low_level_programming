@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 	/**
-	 * main prints Programming is like building a multilingual puzzle
-	 * Return returns 0 if its a success otherwise non zero value if an error occurs
+	 * main - entry point
+	 * Return 0 for success
 	 */
 int main(void)
 {
-	char str1[] = "Programming is like building a multilingual puzzle";
-		puts(str1);
+puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }

@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 	/**
-	 * main - entry point
+	 * main - prints a phrase 
 	 *
-	 * Return 0 for success
+	 * Return: 0 if exited successfully 
 	 */
 int main(void)
 {

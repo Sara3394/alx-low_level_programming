@@ -3,7 +3,6 @@
  * jack_bauer - prints every minute of the day
  * @n: integer input
  *
- * Return: void
  */
 void jack_bauer(void)
 {

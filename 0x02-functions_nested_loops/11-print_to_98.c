@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-/**i
+/**
  * print_to_98 - prints all natural no from n to 98
  * @n: input number
  *

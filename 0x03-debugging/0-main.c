@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - tests a function that if a no is -ve or +ve
+ * main - tests a function that if a no is positive or negative
  *
  * Return: 0
  */

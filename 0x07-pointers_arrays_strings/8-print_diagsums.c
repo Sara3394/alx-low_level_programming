@@ -1,26 +1,37 @@
-#include "main.h"
+#include "main
 #include <stdio.h>
-
 /**
- * print_diagsums -prints the sums of the two diagonals of a square matrix
- * @a: pointer to start a matrix
- * @size: width of matrix column
+ * _strstr - function that locates substring
+ * @haystack: char type pointer
+ * @needle: char type pointer
  *
- * Return: void
+ *
+ * Return: substring or null
  */
-void print_diagsums(int *a, int size)
+char *_strstr(char *haystack, char *needle)
 {
-	int i, j, p, l = 0, r = 0;
+	int i, j;
 
-	for (i = 0; i < size; i++)
+	i = 0;
+	while (haystack[i] != '\0')
 	{
-		p = (i * size) + i;
-		l += *(a + p);
+		j = 0;
+		while (needle[j] != '\0')
+		{
+			if (haystack[i + j] == needle[j])
+			{
+				j++;
+			}
+			else if (haystack[i + j] != needle[j])
+			{
+				break;
+			}
+			else
+				return ('\0');
+		}
+		if (needle[j] == '\0')
+			return (haystack + i);
+		i++;
 	}
-	for (j = 0; j < size; j++)
-	{
-		p = (j * size) + (size - 1 - j);
-		r += *(a + p);
-	}
-	printf("%i, %i\n", l, r);
+	return (NULL);
 }

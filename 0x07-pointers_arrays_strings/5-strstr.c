@@ -11,7 +11,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	unsigned int i = 0, j = 0;
 	
-		while (haystack[i])
+	while (haystack[i])
 		{
 			while (needle[j] && (haystack[i] == needle[0]))
 			{
@@ -28,6 +28,6 @@ char *_strstr(char *haystack, char *needle)
 				else
 					return (haystack + i);
 		}
-		return (0);
-			}
+	return (0);
+}
 		

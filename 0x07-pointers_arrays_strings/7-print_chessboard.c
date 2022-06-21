@@ -3,7 +3,7 @@
 
 /**
  * print_chessboard - prints the chessboard
- * @a the board to be printed
+ * @a: the board to be printed
  *
  * Return: void
  */
@@ -17,7 +17,6 @@ void print_chessboard(char (*a)[8])
 	while (i < 8)
 	{
 		j = 0;
-		
 		while (j < 8)
 		{
 			_putchar(a[i][j]);

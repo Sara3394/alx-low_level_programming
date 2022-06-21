@@ -12,18 +12,24 @@
  *
  *        * Return: pointer to beginning of memory area dest
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
+
 {
-	unsigned int i = 0;
 
-	char *start = dest;
+		unsigned int i;
 
-	while (i < n)
-	{
-		*dest++ = *src++;
-		i++;
-	}
-	return (start);
+
+
+			for (i = 0; i < n; i++)
+
+					{
+
+								*(s + i) = b;
+
+									}
+
+				return (s);
+
 }
 
 © 2022 Git

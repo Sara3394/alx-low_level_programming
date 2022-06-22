@@ -19,7 +19,7 @@ int counter(int root, int n)
 
 /**
  * _sqrt_recursion - function that returns the natural square root
- *
+ * @n: int type argument
  * Return: value of n
  */
 int _sqrt_recursion(int n)

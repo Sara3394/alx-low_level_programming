@@ -1,3 +1,4 @@
-int _islower(int c)
+int _islower()
 {
+  return (0);
 }

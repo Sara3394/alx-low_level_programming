@@ -1,4 +1,4 @@
 void _puts()
 {
-  return (void);
+  return (0);
 }

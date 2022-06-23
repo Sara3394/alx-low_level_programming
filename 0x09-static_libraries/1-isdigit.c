@@ -1,3 +1,4 @@
-int _isdigit(int c)
+int _isdigit()
 {
+  return (0);
 }

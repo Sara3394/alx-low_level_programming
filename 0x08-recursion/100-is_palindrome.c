@@ -39,7 +39,7 @@ int pal_check(char *s, int l)
  * is_palindrome - function that checks for a palindrome
  * @s: string to be checked
  *
- * Return 1 if string is palindrome or 0 if otherwise
+ * Return: 1 if string is palindrome or 0 if otherwise
  */
 int is_palindrome(char *s)
 {

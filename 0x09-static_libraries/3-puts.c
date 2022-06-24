@@ -1,16 +1,3 @@
-#include <stdio.h>
-
-/**
- * main -       Use puts function to output a phrase
- *
- * Description: prints '"Programming is like building a multilingual puzzle'
- *              to stdout
- *
- * Return:      Returns '0' if output string to stdout with no issue
- */
-
-int main(void)
+void _puts()
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
 }

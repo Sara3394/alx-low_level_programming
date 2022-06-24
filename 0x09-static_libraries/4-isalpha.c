@@ -1,4 +1,15 @@
-int _isalpha()
+#include "main.h"
+/**
+ * _isalpha - checks if a character is a letter
+ * @c: letter to check
+ *
+ * Return: 1 if success 0 otherwise
+ */
+int _isalpha(int c)
+
 {
-  return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }

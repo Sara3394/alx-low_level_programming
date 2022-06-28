@@ -5,7 +5,7 @@
 * @str2: second string
 * Return: pointer to a buffer containing str1 & str2
 */
-char *str-concat(char *str1, char *str2)
+char *str_concat(char *str1, char *str2)
 {
 	char *p;
 	int str1count, str2count;

@@ -22,7 +22,7 @@
 		;
 	sizeBuffer = str1count + str2count + 1;
 	p = malloc(sizeBuffer *sizeof(char));
-	if (p = NULL)
+	if (p == NULL)
 		return (NULL);
 	for (i = 0; i < sizeBuffer; i++)
 		i < str1count ? (p[i] = str1[i]) : (p[i] = str2[i - str1count]);

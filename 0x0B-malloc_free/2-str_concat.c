@@ -1,11 +1,11 @@
 #include <stdlib.h>
 /**
-*s tr_concat - concatenates two strings
+* str_concat - concatenates two strings
 * @str1: first string
 * @str2: second string
 * Return: pointer to a buffer containing str1 & str2
 */
-char *str_concat(char *str1, char *str2)
+*char *str_concat(char *str1, char *str2)
 {
 	char *p;
 	int str1count, str2count;
@@ -17,7 +17,7 @@ char *str_concat(char *str1, char *str2)
 	if (str2 == NULL)
 		str2 = "";
 	for (str1count = 0; str1[str1count]; str1count++)
-	 ;
+		;
 	for (str2count = 0; str2[str2count]; str2count++)
 		;
 	sizeBuffer = str1count + str2count + 1;

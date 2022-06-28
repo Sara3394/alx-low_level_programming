@@ -1,7 +1,5 @@
 #include "main.h"
-
 #include <stdlib.h>
-
 /**
  * free_grid  - frees up a grid
  * @grid: grid to check
@@ -9,28 +7,15 @@
  */
 void free_grid(int **grid, int height)
 {
+        int i;
 
-	        int i;
+        if (height <= 0)
+                return;
 
+        if (grid == NULL)
+                return;
 
-
-		        if (height <= 0)
-
-				                return;
-
-
-
-			        if (grid == NULL)
-
-					                return;
-
-
-
-				        for (i = 0; i < height; i++)
-
-						        {
-
-								                free(grid[i]);
-
-										        }
-     
+        for (i = 0; i < height; i++)
+        {
+                free(grid[i]);
+        }

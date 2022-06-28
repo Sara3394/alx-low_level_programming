@@ -14,7 +14,7 @@ char *str_concat(char *str1, char *str2)
 
 	if (str1 == NULL)
 		str1 = "";
-	if (str2 == MULL)
+	if (str2 == NULL)
 		str2 = "";
 	for (str1count = 0; str1[str1count]; str1count++)
 		;
@@ -23,7 +23,7 @@ char *str_concat(char *str1, char *str2)
 	sizeBuffer = str1count + str2count + 1;
 	p = malloc(sizeBuffer *sizeof(char));
 	if (p == NULL)
-		return (NuLL);
+		return (NULL);
 	for (i = 0; i < sizeBuffer; i++)
 		i < str1count ? p[i] = str1[i] : (p[i] = str2[i - str1count]);
 	return (p);

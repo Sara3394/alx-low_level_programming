@@ -18,7 +18,7 @@ char *str_concat(char *str1, char *str2)
 		str2 = "";
 	for (str1count = 0; str1[str1count]; str1count++)
 		;
-	for(str2count = 0; str2[str2count]; str2count++)
+	for (str2count = 0; str2[str2count]; str2count++)
 		;
 	sizeBuffer = str1count + str2count + 1;
 	p = malloc(sizeBuffer *sizeof(char));

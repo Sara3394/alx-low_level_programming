@@ -3,28 +3,28 @@
 /**
  * _strdup - copies a string into a new buffer
  * @str: the string to copy
- * Return: pointer to te buffer
+ * Return: pointer to a new buffer
  */
 char *_strdup(char *str)
 {
-	char *pt;
-	unsigned int l, i;
+	char *p;
+	unsigned int len, j;
 
 	if (str == NULL)
 		return (NULL);
-	for (l = 0; str[l] != '\0'; l++)
-		l++;
-			if (l < 1)
-				return (NULL);
-	pt = malloc(l * sizeof(char));
-	if (pt == NULL)
+	for (len = 0; str[len] != '\0'; len++)
+		;
+	len++;
+	if (len < 1)
+		return (NULL);
+	p = malloc(len * sizeof(char));
+	if (p == NULL)
 	{
-		free(pt);
+		free(p);
 		return (NULL);
 	}
-
-		for (i = 0; i < l; i++)
-			pt[i] = str[i];
-		pt[i] = '\0';
-		return (pt);
+	for (j = 0; j < len; j++)
+		p[j] = str[j];
+	p[j] = '\0';
+	return (p);
 	}

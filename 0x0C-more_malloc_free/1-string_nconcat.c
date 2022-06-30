@@ -1,60 +1,42 @@
-#include <stdlib.h>
 #include "main.h"
-int _strlen(char *s);
+#include <stdlib.h>
 
 /**
- * *string_nconcat - concatenates two strings
- * @s1: string type
- * @s2: string type
- * @n: size of string
- * Return: pointer to newly allocated space in memory
+ * string_nconcat - concatenates two strings
+ * @s1: first string to copy
+ * @s2: second string to copy
+ * @n: number of bytes of second string to copy
+ *
+ * Return: pointer to allocated new place in memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, len, count;
-	char *ptr;
+	unsigned int i, j, m;
+	char *s;
 
 	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	len = _strlen(s2);
-
-	if (n >= len)
-		ptr = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+		i = 0;
 	else
-		ptr = malloc(sizeof(char) * (_strlen(s1) + n + 1));
-	if (ptr == NULL)
+	{
+		for (i = 0; s1[i]; i++)
+			;
+	}
+	if (s2 == NULL)
+		j = 0;
+	else
+	{
+		for (j = 0; s2[j]; j++)
+			;
+	}
+	if (j > n)
+		j = n;
+	s = malloc(sizeof(char) * (i + j + 1));
+	if (s == NULL)
 		return (NULL);
-
-	count = 0;
-	while (s1[count] != '\0')
-	{
-		ptr[count] = s1[count];
-		count++;
-	}
-	i = 0;
-	while (s2[i] != '\0' && i < n)
-	{
-		ptr[count] = s2[i];
-		count++;
-		i++;
-	}
-	ptr[count] = '\0';
-	return (ptr);
+	for (m = 0; m < i; m++)
+		s[m] = s1[m];
+	for (m = 0; m < j; m++)
+		s[m + i] = s2[m];
+	s[i + j] = '\0';
+	return (s);
 }
-
-/**
- * _strlen - Returns the length of a string
- * @s: The given string
- *
- * Return: The length of the string
- */
-int _strlen(char *s)
-{
-	int total;
-
-	for (total = 0; s[total] != '\0'; total++)
-		;
-	return (total);

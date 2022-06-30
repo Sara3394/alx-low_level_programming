@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "coding.h"
+#include "main.h"
 int _strlen(char *s);
 
 /**

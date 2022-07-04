@@ -1,22 +1,15 @@
-#ifndef _DOG_H_
-#define _DOG_H_
-
-/*
- * struct dog - struct with dog info
- * @name: First member
- * @age: Second member
- * @owner: Third member
+#ifndef DOG
+#define DOG
+/**
+ * struct dog - creates a struct with dog info
+ * @name: Dog's name
+ * @age: age of the dog
+ * @owner: Dog's owner
  */
-
-typedef struct dog
-
+struct dog
 {
-
-		char *name;
-
-			float age;
-
-				char *owner;
-
-}
+	char *name;
+	float age;
+	char *owner;
+};
 #endif

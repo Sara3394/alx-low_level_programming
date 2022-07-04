@@ -12,7 +12,7 @@
  *
  *     * @owner: Dog's owner
  *
- *      */
+ */
 
 struct dog
 

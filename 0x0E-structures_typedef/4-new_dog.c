@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * *_strcpy - copy string
  * @dest: destination to copy string to

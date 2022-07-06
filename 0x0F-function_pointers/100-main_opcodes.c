@@ -1,39 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - a function tht checks the opcodes of its own main
- * @argc: argument count
- * @argv: argument vector
- * Return: Always 0
+ * main - prints opicodes of its own main
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: 00
  */
 int main(int argc, char *argv[])
 {
-i	char *opc = (char *) main;
-	int i, nbytes;
-
+	int bytes;
+	int i;
+	char *arr;
+	
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-
-	nbytes = atoi(argv[1]);
-
-	if (nbytes < 0)
+	bytes = atoi(argv[1]);
+	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-
-	for (i = 0; i < nbytes; i++)
+	arr = (char*)main;
+	for (i = 0; i < bytes; i++)
 	{
-		printf("%02x", opc[i] & 0xFF);
-		if (i != nbytes - 1)
-			printf(" ");
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx", arr[i]);
 	}
-
-	printf("\n");
 	return (0);
 }
-

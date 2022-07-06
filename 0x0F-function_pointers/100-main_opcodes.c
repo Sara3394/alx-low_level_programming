@@ -4,14 +4,14 @@
  * main - prints opicodes of its own main
  * @argc: number of arguments
  * @argv: array of arguments
- * Return: 00
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
 	int bytes;
 	int i;
 	char *arr;
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	arr = (char*)main;
+	arr = (char *)main;
 	for (i = 0; i < bytes; i++)
 	{
 		if (i == bytes - 1)

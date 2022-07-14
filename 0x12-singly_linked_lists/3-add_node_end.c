@@ -1,75 +1,54 @@
 #include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
- * add_node_end - adds a new node at the end of linked list
- * @head: pointer to struct of linked list
- * @str: char type pointer to string
- * Return: address of new element
+ * _strlen - finds the length of a string
+ * @str: string to find the length of
+ *
+ * Return: length of string
  */
-list_t *add_node_end(list_t **head, const char *str)
+unsigned int _strlen(char *str)
 {
-	int count = 0;
-	list_t *end_node, *cursor;
+	unsigned int i;
 
-	end_node = malloc(sizeof(list_t));
-	if (end_node == NULL)
-		return (NULL);
-
-	if (str)
-	{
-		end_node->str = _strdup(str);
-		while (str[count] != '\0')
-			count++;
-		end_node->len = count;
-	}
-	else
-	{
-		end_node->str = NULL;
-		end_node->len = 0;
-	}
-	end_node->next = NULL;
-	if (*head)
-	{
-	cursor = *head;
-	while (cursor->next != NULL)
-		cursor = cursor->next;
-	cursor->next = end_node;
-	}
-	else
-		*head = end_node;
-	return (end_node);
+	for (i = 0; str[i]; i++)
+		;
+	return (i);
 }
 
 /**
- * *_strdup -  returns a pointer to allocated space in memory
- * @str: string argument
- * Return: pointer
+ * add_node_end - adds a new node to the end of linked list
+ * @head: double pointer to a linked list
+ * @str: string to add to the new node
+ *
+ * Return: pointer to the new node
  */
-char *_strdup(const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	int i, j;
-	char *ptr;
+	list_t *new, *tmp;
 
 	if (str == NULL)
 		return (NULL);
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-
-	ptr = malloc(sizeof(char) * i + 1);
-
-	if (ptr == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
-
-	j = 0;
-	while (str[j] != '\0')
+	new->str = strdup(str);
+	if (new->str == NULL)
 	{
-		ptr[j] = str[j];
-		j++;
+		free(new);
+		return (NULL);
 	}
-	ptr[j] = '\0';
-	return (ptr);
+	new->len = _strlen(new->str);
+	new->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
+	tmp = *head;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
+	return (new);
 }
